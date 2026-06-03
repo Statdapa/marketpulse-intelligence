@@ -1,0 +1,804 @@
+2026-05-25 11:06:30,440 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-25 11:06:30,996 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:06:31,017 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:06:31,017 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-25 11:06:31,608 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-25 11:06:31,608 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-25 11:06:31,608 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-25 11:06:32,205 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:06:32,221 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-25 11:07:01,624 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:07:31 +07)" (scheduled at 2026-05-25 11:07:01.608411+07:00)
+2026-05-25 11:07:02,737 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,737 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,748 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,756 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,773 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:02,779 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:07:02,779 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:07:31 +07)" executed successfully
+2026-05-25 11:07:31,618 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:08:01 +07)" (scheduled at 2026-05-25 11:07:31.608411+07:00)
+2026-05-25 11:07:32,414 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,429 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,431 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,448 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,450 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,452 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,459 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,462 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,465 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,467 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:07:32,467 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:07:32,468 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:08:01 +07)" executed successfully
+2026-05-25 11:08:01,614 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:08:31 +07)" (scheduled at 2026-05-25 11:08:01.608411+07:00)
+2026-05-25 11:08:02,704 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,704 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,705 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,731 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,736 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,782 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,792 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,807 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,833 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,833 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:02,833 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:08:02,833 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:08:31 +07)" executed successfully
+2026-05-25 11:08:31,616 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:09:01 +07)" (scheduled at 2026-05-25 11:08:31.608411+07:00)
+2026-05-25 11:08:32,719 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,719 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,733 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,735 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,735 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,735 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,758 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,767 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,777 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,804 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:08:32,805 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:08:32,806 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:09:01 +07)" executed successfully
+2026-05-25 11:09:01,624 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:09:31 +07)" (scheduled at 2026-05-25 11:09:01.608411+07:00)
+2026-05-25 11:09:02,725 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,727 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,741 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,741 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,741 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,794 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,811 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,837 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,839 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,844 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:02,850 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:09:02,850 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:09:31 +07)" executed successfully
+2026-05-25 11:09:31,617 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:10:01 +07)" (scheduled at 2026-05-25 11:09:31.608411+07:00)
+2026-05-25 11:09:32,409 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,428 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,436 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,437 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,440 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,445 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,452 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,455 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,457 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,464 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:09:32,465 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:09:32,466 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:10:01 +07)" executed successfully
+2026-05-25 11:10:01,610 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:10:31 +07)" (scheduled at 2026-05-25 11:10:01.608411+07:00)
+2026-05-25 11:10:02,391 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,403 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,406 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,409 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,422 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,430 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,431 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,437 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,440 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,442 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:02,443 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:10:02,444 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:10:31 +07)" executed successfully
+2026-05-25 11:10:31,621 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:11:01 +07)" (scheduled at 2026-05-25 11:10:31.608411+07:00)
+2026-05-25 11:10:32,434 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,439 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,439 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,449 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,450 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,452 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,456 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,456 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,456 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,537 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:10:32,537 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:10:32,537 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:11:01 +07)" executed successfully
+2026-05-25 11:11:01,633 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:11:31 +07)" (scheduled at 2026-05-25 11:11:01.608411+07:00)
+2026-05-25 11:11:02,407 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,409 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gemini.com/v1/pubticker/btcusd: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,428 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.huobi.pro/market/detail/merged?symbol=btcusdt: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,455 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,456 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.gateio.ws/api/v4/spot/tickers?currency_pair=BTC_USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,456 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,457 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,457 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:02,467 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:03,440 [WARNING] scrapers.brightdata_client: Web Unlocker failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: 400, message='Bad Request', url=URL('https://api.brightdata.com/request')
+2026-05-25 11:11:03,440 [INFO] scrapers.exchange_scraper: Exchange scrape: 0/10 succeeded
+2026-05-25 11:11:03,440 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:11:31 +07)" executed successfully
+2026-05-25 11:11:09,385 [INFO] api.scheduler: Scheduler stopped
+2026-05-25 11:11:09,385 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-25 11:11:09,385 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-25 11:14:37,489 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-25 11:14:37,681 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:14:37,681 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-25 11:14:37,681 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:14:37,681 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-25 11:14:38,267 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,267 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-25 11:14:38,270 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-25 11:14:38,270 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-25 11:14:38,875 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:14:38,875 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-25 11:15:08,272 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:15:38 +07)" (scheduled at 2026-05-25 11:15:08.267554+07:00)
+2026-05-25 11:15:29,464 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: Cannot connect to host api.coinbase.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,487 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: Cannot connect to host api.kraken.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,504 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: Cannot connect to host www.okx.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,520 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: Cannot connect to host api.kucoin.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,521 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: Cannot connect to host api.binance.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,684 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: Cannot connect to host api.bybit.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:29,684 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.gemini.com/v1/pubticker/btcusd: Cannot connect to host api.gemini.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:31,069 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: Cannot connect to host api-pub.bitfinex.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:31,069 [INFO] scrapers.exchange_scraper: Exchange scrape: 2/10 succeeded
+2026-05-25 11:15:31,069 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:15:38 +07)" executed successfully
+2026-05-25 11:15:38,281 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:16:08 +07)" (scheduled at 2026-05-25 11:15:38.267554+07:00)
+2026-05-25 11:15:59,362 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.binance.com/api/v3/ticker/bookTicker?symbol=BTCUSDT: Cannot connect to host api.binance.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,362 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://www.okx.com/api/v5/market/ticker?instId=BTC-USDT: Cannot connect to host www.okx.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,362 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.bybit.com/v5/market/tickers?category=spot&symbol=BTCUSDT: Cannot connect to host api.bybit.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,362 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.gemini.com/v1/pubticker/btcusd: Cannot connect to host api.gemini.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,362 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.kucoin.com/api/v1/market/orderbook/level1?symbol=BTC-USDT: Cannot connect to host api.kucoin.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,377 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api-pub.bitfinex.com/v2/ticker/tBTCUSD: Cannot connect to host api-pub.bitfinex.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,379 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.kraken.com/0/public/Ticker?pair=XBTUSD: Cannot connect to host api.kraken.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,379 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://api.coinbase.com/v2/prices/BTC-USD/buy: Cannot connect to host api.coinbase.com:443 ssl:default [The semaphore timeout period has expired]
+2026-05-25 11:15:59,379 [INFO] scrapers.exchange_scraper: Exchange scrape: 2/10 succeeded
+2026-05-25 11:15:59,379 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:16:08 +07)" executed successfully
+2026-05-25 11:16:08,276 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:16:38 +07)" (scheduled at 2026-05-25 11:16:08.267554+07:00)
+2026-05-25 11:16:09,471 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:16:09,624 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:16:10,443 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:16:31,384 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:16:31,483 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:16:31,484 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:16:38 +07)" executed successfully
+2026-05-25 11:16:34,715 [INFO] api.scheduler: Scheduler stopped
+2026-05-25 11:16:34,715 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-25 11:16:34,715 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-25 11:17:00,680 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-25 11:17:00,867 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:17:00,867 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-25 11:17:00,867 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-25 11:17:00,867 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-25 11:17:01,432 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-25 11:17:01,433 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,433 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,433 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,434 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,434 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,434 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-25 11:17:01,436 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-25 11:17:01,436 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-25 11:17:01,436 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-25 11:17:01,436 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-25 11:17:01,437 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-25 11:17:01,437 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-25 11:17:01,437 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-25 11:17:01,437 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-25 11:17:02,295 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:17:02,295 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-25 11:17:31,437 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:18:01 +07)" (scheduled at 2026-05-25 11:17:31.433903+07:00)
+2026-05-25 11:17:32,754 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:17:32,807 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:17:33,596 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:17:33,604 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:17:33,633 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:17:33,634 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:18:01 +07)" executed successfully
+2026-05-25 11:18:01,445 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:18:31 +07)" (scheduled at 2026-05-25 11:18:01.433903+07:00)
+2026-05-25 11:18:02,580 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:18:02,615 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:18:03,423 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:03,424 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:03,425 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:03,426 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:18:31 +07)" executed successfully
+2026-05-25 11:18:31,436 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:19:01 +07)" (scheduled at 2026-05-25 11:18:31.433903+07:00)
+2026-05-25 11:18:32,609 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:18:32,625 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:18:33,352 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:33,436 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:54,503 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:18:54,507 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:19:01 +07)" executed successfully
+2026-05-25 11:19:01,445 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:19:31 +07)" (scheduled at 2026-05-25 11:19:01.433903+07:00)
+2026-05-25 11:19:02,689 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:19:02,720 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:19:03,463 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:03,506 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:03,516 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:03,517 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:19:31 +07)" executed successfully
+2026-05-25 11:19:31,437 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:20:01 +07)" (scheduled at 2026-05-25 11:19:31.433903+07:00)
+2026-05-25 11:19:32,569 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:19:32,606 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:19:33,411 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:33,429 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:54,469 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:19:54,469 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:20:01 +07)" executed successfully
+2026-05-25 11:20:01,445 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:20:31 +07)" (scheduled at 2026-05-25 11:20:01.433903+07:00)
+2026-05-25 11:20:02,678 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:20:02,715 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:20:03,515 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:03,515 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:03,538 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:03,546 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:20:31 +07)" executed successfully
+2026-05-25 11:20:31,442 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:21:01 +07)" (scheduled at 2026-05-25 11:20:31.433903+07:00)
+2026-05-25 11:20:32,629 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:20:32,649 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:20:33,446 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:33,451 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:54,485 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:20:54,486 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:21:01 +07)" executed successfully
+2026-05-25 11:21:01,437 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:21:31 +07)" (scheduled at 2026-05-25 11:21:01.433903+07:00)
+2026-05-25 11:21:02,600 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:21:02,632 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:21:03,431 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:03,435 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:03,472 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:03,474 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:21:31 +07)" executed successfully
+2026-05-25 11:21:31,438 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:22:01 +07)" (scheduled at 2026-05-25 11:21:31.433903+07:00)
+2026-05-25 11:21:32,757 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:21:32,782 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:21:33,483 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:33,503 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:33,554 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:21:33,555 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:22:01 +07)" executed successfully
+2026-05-25 11:22:01,448 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:22:31 +07)" (scheduled at 2026-05-25 11:22:01.433903+07:00)
+2026-05-25 11:22:01,449 [INFO] apscheduler.executors.default: Running job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-25 11:27:01 +07)" (scheduled at 2026-05-25 11:22:01.433903+07:00)
+2026-05-25 11:22:02,616 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:22:02,641 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:22:02,878 [INFO] scrapers.sentiment_scraper: X sentiment scraped: {}
+2026-05-25 11:22:03,355 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:03,363 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:03,483 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:03,484 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:22:31 +07)" executed successfully
+2026-05-25 11:22:06,890 [INFO] scrapers.sentiment_scraper: Reddit sentiment scraped: {'BTC': {'score': 64.3, 'mentions': 50}, 'ETH': {'score': 51.8, 'mentions': 50}, 'SOL': {'score': 72.9, 'mentions': 30}, 'MKT': {'score': 56.0, 'mentions': 50}}
+2026-05-25 11:22:06,893 [INFO] apscheduler.executors.default: Job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-25 11:27:01 +07)" executed successfully
+2026-05-25 11:22:31,449 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:23:01 +07)" (scheduled at 2026-05-25 11:22:31.433903+07:00)
+2026-05-25 11:22:32,672 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:22:32,691 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:22:33,471 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:33,472 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:54,494 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:22:54,494 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:23:01 +07)" executed successfully
+2026-05-25 11:23:01,441 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:23:31 +07)" (scheduled at 2026-05-25 11:23:01.433903+07:00)
+2026-05-25 11:23:02,614 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:23:02,631 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:23:03,272 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:03,446 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:24,480 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:24,480 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:23:31 +07)" executed successfully
+2026-05-25 11:23:31,440 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:24:01 +07)" (scheduled at 2026-05-25 11:23:31.433903+07:00)
+2026-05-25 11:23:32,609 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:23:32,679 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:23:33,449 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:33,452 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:33,458 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:23:33,460 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:24:01 +07)" executed successfully
+2026-05-25 11:24:01,446 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:24:31 +07)" (scheduled at 2026-05-25 11:24:01.433903+07:00)
+2026-05-25 11:24:02,705 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:24:02,730 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:24:03,446 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:03,521 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:03,529 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:03,529 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:24:31 +07)" executed successfully
+2026-05-25 11:24:31,439 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:25:01 +07)" (scheduled at 2026-05-25 11:24:31.433903+07:00)
+2026-05-25 11:24:32,589 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:24:32,611 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:24:33,370 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:33,403 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:33,434 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:24:33,435 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:25:01 +07)" executed successfully
+2026-05-25 11:25:01,448 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:25:31 +07)" (scheduled at 2026-05-25 11:25:01.433903+07:00)
+2026-05-25 11:25:02,630 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:25:02,646 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:25:03,429 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:03,439 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:03,450 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:03,450 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:25:31 +07)" executed successfully
+2026-05-25 11:25:31,438 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:26:01 +07)" (scheduled at 2026-05-25 11:25:31.433903+07:00)
+2026-05-25 11:25:32,621 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:25:32,622 [WARNING] anomaly.detector: SPREAD ANOMALY: GEMINI BTC/USDT spread 0.000% (33.98× above average 0.000%)
+2026-05-25 11:25:32,658 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 4}
+2026-05-25 11:25:33,437 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:33,439 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:33,440 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:54,494 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:25:54,494 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:26:01 +07)" executed successfully
+2026-05-25 11:26:01,446 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:26:31 +07)" (scheduled at 2026-05-25 11:26:01.433903+07:00)
+2026-05-25 11:26:02,679 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-25 11:26:02,706 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-25 11:26:03,370 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:26:03,503 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:26:03,529 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-25 11:26:03,530 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-25 11:26:31 +07)" executed successfully
+2026-05-25 11:26:08,992 [INFO] api.scheduler: Scheduler stopped
+2026-05-25 11:26:08,992 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-25 11:26:08,992 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-26 23:14:44,639 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-26 23:14:45,017 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:14:45,017 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-26 23:14:45,017 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:14:45,017 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-26 23:14:45,739 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-26 23:14:45,739 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-26 23:14:45,754 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-26 23:14:45,754 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-26 23:14:45,754 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-26 23:14:45,754 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-26 23:14:45,754 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-26 23:14:45,754 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-26 23:14:46,625 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:14:46,625 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-26 23:14:46,647 [INFO] api.scheduler: Scheduler stopped
+2026-05-26 23:14:46,648 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-26 23:14:46,727 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-26 23:15:49,068 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-26 23:15:49,237 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:15:49,238 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-26 23:15:49,239 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:15:49,239 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-26 23:15:49,850 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,850 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-26 23:15:49,866 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-26 23:15:49,869 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-26 23:15:50,713 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:15:50,715 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-26 23:16:19,861 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:16:49 +07)" (scheduled at 2026-05-26 23:16:19.850532+07:00)
+2026-05-26 23:16:21,315 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:16:21,413 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:16:22,244 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:22,244 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:22,244 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:22,244 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:16:49 +07)" executed successfully
+2026-05-26 23:16:49,854 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:17:19 +07)" (scheduled at 2026-05-26 23:16:49.850532+07:00)
+2026-05-26 23:16:51,396 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:16:51,458 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 5, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 5}
+2026-05-26 23:16:52,074 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:52,136 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:52,158 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:52,239 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:52,258 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:16:52,258 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:17:19 +07)" executed successfully
+2026-05-26 23:17:19,857 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:17:49 +07)" (scheduled at 2026-05-26 23:17:19.850532+07:00)
+2026-05-26 23:17:21,047 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:17:21,064 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:17:21,878 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:17:21,878 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:17:21,919 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:17:21,920 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:17:49 +07)" executed successfully
+2026-05-26 23:17:49,865 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:18:19 +07)" (scheduled at 2026-05-26 23:17:49.850532+07:00)
+2026-05-26 23:17:51,021 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:17:51,024 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:17:51,853 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:17:51,853 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:18:19 +07)" executed successfully
+2026-05-26 23:18:19,862 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:18:49 +07)" (scheduled at 2026-05-26 23:18:19.850532+07:00)
+2026-05-26 23:18:21,085 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:18:21,101 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:18:21,789 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:18:42,944 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:18:42,944 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:18:49 +07)" executed successfully
+2026-05-26 23:18:49,854 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:19:19 +07)" (scheduled at 2026-05-26 23:18:49.850532+07:00)
+2026-05-26 23:18:51,038 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:18:51,046 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:18:51,839 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:18:51,839 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:19:19 +07)" executed successfully
+2026-05-26 23:19:14,899 [INFO] api.scheduler: Scheduler stopped
+2026-05-26 23:19:14,899 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-26 23:19:14,899 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-26 23:21:28,140 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-26 23:21:28,348 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:21:28,350 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-26 23:21:28,351 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:21:28,351 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-26 23:21:28,966 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-26 23:21:28,966 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-26 23:21:28,966 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-26 23:21:29,811 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:21:29,811 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-26 23:21:58,980 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:22:28 +07)" (scheduled at 2026-05-26 23:21:58.966641+07:00)
+2026-05-26 23:22:00,281 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:22:00,281 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:22:28 +07)" executed successfully
+2026-05-26 23:22:28,974 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:22:58 +07)" (scheduled at 2026-05-26 23:22:28.966641+07:00)
+2026-05-26 23:22:30,203 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:22:30,225 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 5, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 5}
+2026-05-26 23:22:30,911 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:22:31,005 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:22:31,039 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:22:31,071 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:22:31,089 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:22:31,090 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:22:58 +07)" executed successfully
+2026-05-26 23:22:58,982 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:23:28 +07)" (scheduled at 2026-05-26 23:22:58.966641+07:00)
+2026-05-26 23:23:00,481 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:23:00,489 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:23:22,380 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:23:22,380 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:23:28 +07)" executed successfully
+2026-05-26 23:23:28,974 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:23:58 +07)" (scheduled at 2026-05-26 23:23:28.966641+07:00)
+2026-05-26 23:23:31,554 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:23:31,573 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:23:32,300 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:23:32,394 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:23:32,403 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:23:32,406 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:23:58 +07)" executed successfully
+2026-05-26 23:23:58,981 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:24:28 +07)" (scheduled at 2026-05-26 23:23:58.966641+07:00)
+2026-05-26 23:24:00,167 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:24:00,168 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:24:28 +07)" executed successfully
+2026-05-26 23:24:28,976 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:24:58 +07)" (scheduled at 2026-05-26 23:24:28.966641+07:00)
+2026-05-26 23:24:30,127 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:24:30,135 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:24:30,847 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:24:30,960 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:24:30,961 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:24:58 +07)" executed successfully
+2026-05-26 23:24:58,983 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:25:28 +07)" (scheduled at 2026-05-26 23:24:58.966641+07:00)
+2026-05-26 23:25:00,233 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:25:00,241 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:25:00,944 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:25:00,945 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:25:28 +07)" executed successfully
+2026-05-26 23:25:28,975 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:25:58 +07)" (scheduled at 2026-05-26 23:25:28.966641+07:00)
+2026-05-26 23:25:30,222 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:25:30,235 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:25:30,964 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:25:31,021 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:25:31,022 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:25:58 +07)" executed successfully
+2026-05-26 23:25:58,969 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:26:28 +07)" (scheduled at 2026-05-26 23:25:58.966641+07:00)
+2026-05-26 23:26:00,202 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:26:00,214 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:26:01,010 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:01,025 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:01,025 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:26:28 +07)" executed successfully
+2026-05-26 23:26:28,970 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:26:58 +07)" (scheduled at 2026-05-26 23:26:28.966641+07:00)
+2026-05-26 23:26:28,971 [INFO] apscheduler.executors.default: Running job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:31:28 +07)" (scheduled at 2026-05-26 23:26:28.966641+07:00)
+2026-05-26 23:26:30,171 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:26:30,171 [WARNING] anomaly.detector: SPREAD ANOMALY: HUOBI BTC/USDT spread 0.011% (10.37× above average 0.001%)
+2026-05-26 23:26:30,191 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 4}
+2026-05-26 23:26:30,539 [INFO] scrapers.sentiment_scraper: X sentiment scraped: {}
+2026-05-26 23:26:30,925 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:31,035 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:31,040 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:34,754 [INFO] scrapers.sentiment_scraper: Reddit sentiment scraped: {'BTC': {'score': 73.5, 'mentions': 50}, 'ETH': {'score': 47.6, 'mentions': 50}, 'SOL': {'score': 73.1, 'mentions': 30}, 'MKT': {'score': 55.5, 'mentions': 50}}
+2026-05-26 23:26:34,754 [INFO] apscheduler.executors.default: Job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:31:28 +07)" executed successfully
+2026-05-26 23:26:52,090 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:26:52,090 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:26:58 +07)" executed successfully
+2026-05-26 23:26:58,967 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:27:28 +07)" (scheduled at 2026-05-26 23:26:58.966641+07:00)
+2026-05-26 23:27:00,183 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:27:00,183 [WARNING] anomaly.detector: SPREAD ANOMALY: GEMINI BTC/USDT spread 0.006% (3.26× above average 0.002%)
+2026-05-26 23:27:00,200 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:27:00,939 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:00,967 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:00,984 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:00,984 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:27:28 +07)" executed successfully
+2026-05-26 23:27:28,975 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:27:58 +07)" (scheduled at 2026-05-26 23:27:28.966641+07:00)
+2026-05-26 23:27:30,143 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:27:30,155 [WARNING] anomaly.detector: SPREAD ANOMALY: GATE BTC/USDT spread 0.003% (21.0× above average 0.000%)
+2026-05-26 23:27:30,160 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:27:30,967 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:30,994 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:30,996 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:30,998 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:27:58 +07)" executed successfully
+2026-05-26 23:27:45,493 [INFO] api.scheduler: Scheduler stopped
+2026-05-26 23:27:45,493 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-26 23:27:45,493 [INFO] api.routes: MarketPulse Intelligence API stopped
+2026-05-26 23:27:56,718 [INFO] chromadb.telemetry.product.posthog: Anonymized telemetry enabled. See                     https://docs.trychroma.com/telemetry for more information.
+2026-05-26 23:27:56,920 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientStartEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:27:56,920 [INFO] chromadb.api.segment: Collection marketpulse_docs is not created.
+2026-05-26 23:27:56,920 [ERROR] chromadb.telemetry.product.posthog: Failed to send telemetry event ClientCreateCollectionEvent: capture() takes 1 positional argument but 3 were given
+2026-05-26 23:27:56,920 [INFO] rag.pipeline: ChromaDB initialized
+2026-05-26 23:27:57,872 [INFO] rag.pipeline: Groq LLM initialized: llama3-70b-8192
+2026-05-26 23:27:57,873 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,873 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,874 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,874 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,875 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,875 [INFO] apscheduler.scheduler: Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2026-05-26 23:27:57,877 [INFO] apscheduler.scheduler: Added job "Exchange Scraper" to job store "default"
+2026-05-26 23:27:57,877 [INFO] apscheduler.scheduler: Added job "Sentiment Scraper" to job store "default"
+2026-05-26 23:27:57,877 [INFO] apscheduler.scheduler: Added job "Regulatory Scraper" to job store "default"
+2026-05-26 23:27:57,882 [INFO] apscheduler.scheduler: Added job "Job Scraper" to job store "default"
+2026-05-26 23:27:57,882 [INFO] apscheduler.scheduler: Added job "SERP Monitor" to job store "default"
+2026-05-26 23:27:57,882 [INFO] apscheduler.scheduler: Added job "RAG Ingest" to job store "default"
+2026-05-26 23:27:57,882 [INFO] apscheduler.scheduler: Scheduler started
+2026-05-26 23:27:57,882 [INFO] api.scheduler: Scheduler started with jobs: exchanges, sentiment, regulatory, jobs, serp, rag_ingest
+2026-05-26 23:27:58,717 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:27:58,719 [INFO] api.routes: MarketPulse Intelligence API started
+2026-05-26 23:28:27,880 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:28:57 +07)" (scheduled at 2026-05-26 23:28:27.873877+07:00)
+2026-05-26 23:28:29,195 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:28:29,233 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:28:29,993 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:28:30,009 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:28:30,024 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:28:30,026 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:28:57 +07)" executed successfully
+2026-05-26 23:28:57,887 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:29:27 +07)" (scheduled at 2026-05-26 23:28:57.873877+07:00)
+2026-05-26 23:28:59,094 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:28:59,097 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:28:59,913 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:28:59,913 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:28:59,914 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:29:27 +07)" executed successfully
+2026-05-26 23:29:27,874 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:29:57 +07)" (scheduled at 2026-05-26 23:29:27.873877+07:00)
+2026-05-26 23:29:29,180 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:29:29,227 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:29:30,039 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:29:51,046 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:29:51,046 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:29:57 +07)" executed successfully
+2026-05-26 23:29:57,885 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:30:27 +07)" (scheduled at 2026-05-26 23:29:57.873877+07:00)
+2026-05-26 23:29:59,037 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:29:59,037 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:29:59,685 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:29:59,685 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:30:27 +07)" executed successfully
+2026-05-26 23:30:27,878 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:30:57 +07)" (scheduled at 2026-05-26 23:30:27.873877+07:00)
+2026-05-26 23:30:29,144 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:30:29,161 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:30:29,994 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:30:30,010 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:30:30,010 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:30:57 +07)" executed successfully
+2026-05-26 23:30:57,886 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:31:27 +07)" (scheduled at 2026-05-26 23:30:57.873877+07:00)
+2026-05-26 23:30:59,124 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:30:59,144 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:30:59,952 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:30:59,952 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:30:59,969 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:30:59,969 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:31:27 +07)" executed successfully
+2026-05-26 23:31:27,888 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:31:57 +07)" (scheduled at 2026-05-26 23:31:27.873877+07:00)
+2026-05-26 23:31:29,128 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:31:29,145 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:31:29,955 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:31:29,955 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:31:57 +07)" executed successfully
+2026-05-26 23:31:57,883 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:32:27 +07)" (scheduled at 2026-05-26 23:31:57.873877+07:00)
+2026-05-26 23:31:59,036 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:31:59,036 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:32:27 +07)" executed successfully
+2026-05-26 23:32:27,883 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:32:57 +07)" (scheduled at 2026-05-26 23:32:27.873877+07:00)
+2026-05-26 23:32:29,074 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:32:29,090 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:32:29,920 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:32:29,926 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:32:29,927 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:32:57 +07)" executed successfully
+2026-05-26 23:32:57,885 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:33:27 +07)" (scheduled at 2026-05-26 23:32:57.873877+07:00)
+2026-05-26 23:32:57,885 [INFO] apscheduler.executors.default: Running job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:37:57 +07)" (scheduled at 2026-05-26 23:32:57.873877+07:00)
+2026-05-26 23:32:59,252 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:32:59,254 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:33:27 +07)" executed successfully
+2026-05-26 23:32:59,384 [INFO] scrapers.sentiment_scraper: X sentiment scraped: {}
+2026-05-26 23:33:03,923 [INFO] scrapers.sentiment_scraper: Reddit sentiment scraped: {'BTC': {'score': 73.5, 'mentions': 50}, 'ETH': {'score': 47.6, 'mentions': 50}, 'SOL': {'score': 73.1, 'mentions': 30}, 'MKT': {'score': 55.5, 'mentions': 50}}
+2026-05-26 23:33:03,923 [INFO] apscheduler.executors.default: Job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:37:57 +07)" executed successfully
+2026-05-26 23:33:27,899 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:33:57 +07)" (scheduled at 2026-05-26 23:33:27.873877+07:00)
+2026-05-26 23:33:29,045 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:33:29,045 [WARNING] anomaly.detector: SPREAD ANOMALY: KRAKEN BTC/USDT spread 0.001% (4.0× above average 0.000%)
+2026-05-26 23:33:29,068 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 4}
+2026-05-26 23:33:29,845 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:33:29,861 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:33:29,861 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:33:29,880 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:33:29,880 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:33:57 +07)" executed successfully
+2026-05-26 23:33:57,884 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:34:27 +07)" (scheduled at 2026-05-26 23:33:57.873877+07:00)
+2026-05-26 23:33:59,047 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:33:59,048 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:34:27 +07)" executed successfully
+2026-05-26 23:34:27,897 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:34:57 +07)" (scheduled at 2026-05-26 23:34:27.873877+07:00)
+2026-05-26 23:34:29,118 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:34:29,118 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:34:29,924 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:34:29,924 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:34:57 +07)" executed successfully
+2026-05-26 23:34:57,881 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:35:27 +07)" (scheduled at 2026-05-26 23:34:57.873877+07:00)
+2026-05-26 23:34:59,033 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:34:59,049 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:34:59,645 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:34:59,831 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:34:59,831 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:35:27 +07)" executed successfully
+2026-05-26 23:35:27,876 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:35:57 +07)" (scheduled at 2026-05-26 23:35:27.873877+07:00)
+2026-05-26 23:35:29,056 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:35:29,060 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:35:29,881 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:35:29,881 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:35:57 +07)" executed successfully
+2026-05-26 23:35:57,888 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:36:27 +07)" (scheduled at 2026-05-26 23:35:57.873877+07:00)
+2026-05-26 23:35:59,037 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:35:59,037 [WARNING] anomaly.detector: SPREAD ANOMALY: OKX BTC/USDT spread 0.003% (20.98× above average 0.000%)
+2026-05-26 23:35:59,053 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:35:59,808 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:35:59,812 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:35:59,826 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:35:59,827 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:36:27 +07)" executed successfully
+2026-05-26 23:36:27,895 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:36:57 +07)" (scheduled at 2026-05-26 23:36:27.873877+07:00)
+2026-05-26 23:36:29,079 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:36:29,080 [WARNING] anomaly.detector: SPREAD ANOMALY: HUOBI BTC/USDT spread 0.002% (2.57× above average 0.001%)
+2026-05-26 23:36:29,081 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 0, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:36:50,928 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:36:50,928 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:36:57 +07)" executed successfully
+2026-05-26 23:36:57,889 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:37:27 +07)" (scheduled at 2026-05-26 23:36:57.873877+07:00)
+2026-05-26 23:36:59,083 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:36:59,098 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:36:59,878 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:36:59,884 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:36:59,885 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:37:27 +07)" executed successfully
+2026-05-26 23:37:27,880 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:37:57 +07)" (scheduled at 2026-05-26 23:37:27.873877+07:00)
+2026-05-26 23:37:29,090 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:37:29,114 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:37:29,849 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:37:29,913 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:37:29,945 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:37:29,945 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:37:57 +07)" executed successfully
+2026-05-26 23:37:57,886 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:38:27 +07)" (scheduled at 2026-05-26 23:37:57.873877+07:00)
+2026-05-26 23:37:57,886 [INFO] apscheduler.executors.default: Running job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:42:57 +07)" (scheduled at 2026-05-26 23:37:57.873877+07:00)
+2026-05-26 23:37:57,886 [INFO] apscheduler.executors.default: Running job "RAG Ingest (trigger: interval[0:10:00], next run at: 2026-05-26 23:47:57 +07)" (scheduled at 2026-05-26 23:37:57.875872+07:00)
+2026-05-26 23:37:57,886 [INFO] apscheduler.executors.default: Job "RAG Ingest (trigger: interval[0:10:00], next run at: 2026-05-26 23:47:57 +07)" executed successfully
+2026-05-26 23:37:59,292 [INFO] scrapers.sentiment_scraper: X sentiment scraped: {}
+2026-05-26 23:37:59,387 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:37:59,398 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:38:00,178 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:00,178 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:00,178 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:38:27 +07)" executed successfully
+2026-05-26 23:38:03,795 [INFO] scrapers.sentiment_scraper: Reddit sentiment scraped: {'BTC': {'score': 73.5, 'mentions': 50}, 'ETH': {'score': 47.6, 'mentions': 50}, 'SOL': {'score': 73.1, 'mentions': 30}, 'MKT': {'score': 55.5, 'mentions': 50}}
+2026-05-26 23:38:03,795 [INFO] apscheduler.executors.default: Job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:42:57 +07)" executed successfully
+2026-05-26 23:38:27,895 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:38:57 +07)" (scheduled at 2026-05-26 23:38:27.873877+07:00)
+2026-05-26 23:38:29,064 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:38:29,074 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:38:29,835 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:29,914 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:29,914 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:38:57 +07)" executed successfully
+2026-05-26 23:38:57,881 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:39:27 +07)" (scheduled at 2026-05-26 23:38:57.873877+07:00)
+2026-05-26 23:38:59,036 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:38:59,037 [WARNING] anomaly.detector: SPREAD ANOMALY: GEMINI BTC/USDT spread 0.005% (352.8× above average 0.000%)
+2026-05-26 23:38:59,054 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:38:59,826 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:59,834 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:59,847 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:38:59,848 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:39:27 +07)" executed successfully
+2026-05-26 23:39:27,883 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:39:57 +07)" (scheduled at 2026-05-26 23:39:27.873877+07:00)
+2026-05-26 23:39:29,105 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:39:29,121 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 3}
+2026-05-26 23:39:29,890 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:39:29,963 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:39:29,981 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:39:29,981 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:39:57 +07)" executed successfully
+2026-05-26 23:39:57,889 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:40:27 +07)" (scheduled at 2026-05-26 23:39:57.873877+07:00)
+2026-05-26 23:39:59,046 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:39:59,062 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:39:59,861 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:39:59,861 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:39:59,861 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:40:27 +07)" executed successfully
+2026-05-26 23:40:27,897 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:40:57 +07)" (scheduled at 2026-05-26 23:40:27.873877+07:00)
+2026-05-26 23:40:29,043 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:40:29,043 [WARNING] anomaly.detector: SPREAD ANOMALY: HUOBI BTC/USDT spread 0.002% (2.6× above average 0.001%)
+2026-05-26 23:40:29,059 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:40:29,855 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:40:50,855 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:40:50,856 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:40:57 +07)" executed successfully
+2026-05-26 23:40:57,874 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:41:27 +07)" (scheduled at 2026-05-26 23:40:57.873877+07:00)
+2026-05-26 23:40:59,074 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:40:59,092 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 1, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 1}
+2026-05-26 23:40:59,907 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:40:59,907 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:41:27 +07)" executed successfully
+2026-05-26 23:41:27,882 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:41:57 +07)" (scheduled at 2026-05-26 23:41:27.873877+07:00)
+2026-05-26 23:41:29,031 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:41:29,047 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:41:29,866 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:41:50,877 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:41:50,878 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:41:57 +07)" executed successfully
+2026-05-26 23:41:57,889 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:42:27 +07)" (scheduled at 2026-05-26 23:41:57.873877+07:00)
+2026-05-26 23:41:59,039 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:41:59,054 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:41:59,732 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:41:59,854 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:41:59,854 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:42:27 +07)" executed successfully
+2026-05-26 23:42:27,885 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:42:57 +07)" (scheduled at 2026-05-26 23:42:27.873877+07:00)
+2026-05-26 23:42:29,024 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:42:29,053 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 0, 'total': 2}
+2026-05-26 23:42:50,784 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:42:50,800 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:42:50,800 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:42:57 +07)" executed successfully
+2026-05-26 23:42:57,875 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:43:27 +07)" (scheduled at 2026-05-26 23:42:57.873877+07:00)
+2026-05-26 23:42:57,875 [INFO] apscheduler.executors.default: Running job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:47:57 +07)" (scheduled at 2026-05-26 23:42:57.873877+07:00)
+2026-05-26 23:42:57,877 [INFO] apscheduler.executors.default: Running job "Regulatory Scraper (trigger: interval[0:15:00], next run at: 2026-05-26 23:57:57 +07)" (scheduled at 2026-05-26 23:42:57.874872+07:00)
+2026-05-26 23:42:58,212 [WARNING] scrapers.brightdata_client: Direct fetch failed for https://ojk.go.id/en/berita-dan-kegiatan/siaran-pers/Pages/Default.aspx: 404, message='Not Found', url=URL('https://ojk.go.id/en/berita-dan-kegiatan/siaran-pers/Pages/Default.aspx')
+2026-05-26 23:42:58,371 [INFO] scrapers.regulatory_scraper: MAS: ingested 2 items
+2026-05-26 23:42:58,899 [INFO] scrapers.regulatory_scraper: SEC: ingested 10 filings
+2026-05-26 23:42:58,899 [INFO] scrapers.regulatory_scraper: Regulatory scrape complete: 12 total filings ingested
+2026-05-26 23:42:58,899 [INFO] apscheduler.executors.default: Job "Regulatory Scraper (trigger: interval[0:15:00], next run at: 2026-05-26 23:57:57 +07)" executed successfully
+2026-05-26 23:42:59,039 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:42:59,061 [WARNING] anomaly.detector: FILING SPIKE: FILING SPIKE: SEC — 10 filings in last hour (threshold: 5)
+2026-05-26 23:42:59,061 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 1, 'total': 3}
+2026-05-26 23:42:59,353 [INFO] scrapers.sentiment_scraper: X sentiment scraped: {}
+2026-05-26 23:42:59,823 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:42:59,823 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:42:59,860 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:42:59,862 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:43:27 +07)" executed successfully
+2026-05-26 23:43:03,553 [INFO] scrapers.sentiment_scraper: Reddit sentiment scraped: {'BTC': {'score': 73.5, 'mentions': 50}, 'ETH': {'score': 47.6, 'mentions': 50}, 'SOL': {'score': 73.1, 'mentions': 30}, 'MKT': {'score': 55.5, 'mentions': 50}}
+2026-05-26 23:43:03,553 [INFO] apscheduler.executors.default: Job "Sentiment Scraper (trigger: interval[0:05:00], next run at: 2026-05-26 23:47:57 +07)" executed successfully
+2026-05-26 23:43:27,889 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:43:57 +07)" (scheduled at 2026-05-26 23:43:27.873877+07:00)
+2026-05-26 23:43:29,017 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:43:29,017 [WARNING] anomaly.detector: SPREAD ANOMALY: HUOBI BTC/USDT spread 0.002% (2.42× above average 0.001%)
+2026-05-26 23:43:29,051 [WARNING] anomaly.detector: FILING SPIKE: FILING SPIKE: SEC — 10 filings in last hour (threshold: 5)
+2026-05-26 23:43:29,051 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 1, 'total': 5}
+2026-05-26 23:43:29,859 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:43:29,889 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:43:29,901 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:43:29,901 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:43:29,903 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:43:57 +07)" executed successfully
+2026-05-26 23:43:57,877 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:44:27 +07)" (scheduled at 2026-05-26 23:43:57.873877+07:00)
+2026-05-26 23:43:59,022 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:43:59,044 [WARNING] anomaly.detector: FILING SPIKE: FILING SPIKE: SEC — 10 filings in last hour (threshold: 5)
+2026-05-26 23:43:59,044 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 3, 'sentiment_shifts': 0, 'filing_spikes': 1, 'total': 4}
+2026-05-26 23:43:59,812 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:43:59,818 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:20,761 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:20,761 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:44:27 +07)" executed successfully
+2026-05-26 23:44:27,879 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:44:57 +07)" (scheduled at 2026-05-26 23:44:27.873877+07:00)
+2026-05-26 23:44:29,185 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:44:29,185 [WARNING] anomaly.detector: SPREAD ANOMALY: HUOBI BTC/USDT spread 0.002% (2.93× above average 0.001%)
+2026-05-26 23:44:29,201 [WARNING] anomaly.detector: FILING SPIKE: FILING SPIKE: SEC — 10 filings in last hour (threshold: 5)
+2026-05-26 23:44:29,201 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 1, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 1, 'total': 4}
+2026-05-26 23:44:29,996 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:30,012 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:30,044 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:30,045 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:44:57 +07)" executed successfully
+2026-05-26 23:44:57,887 [INFO] apscheduler.executors.default: Running job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:45:27 +07)" (scheduled at 2026-05-26 23:44:57.873877+07:00)
+2026-05-26 23:44:59,057 [INFO] scrapers.exchange_scraper: Exchange scrape: 10/10 succeeded
+2026-05-26 23:44:59,066 [WARNING] anomaly.detector: FILING SPIKE: FILING SPIKE: SEC — 10 filings in last hour (threshold: 5)
+2026-05-26 23:44:59,066 [INFO] anomaly.detector: Anomaly detection: {'spread_anomalies': 0, 'arbitrage_signals': 2, 'sentiment_shifts': 0, 'filing_spikes': 1, 'total': 3}
+2026-05-26 23:44:59,890 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:59,892 [WARNING] alerts.telegram_bot: Telegram API error 404: {"ok":false,"error_code":404,"description":"Not Found"}
+2026-05-26 23:44:59,893 [INFO] apscheduler.executors.default: Job "Exchange Scraper (trigger: interval[0:00:30], next run at: 2026-05-26 23:45:27 +07)" executed successfully
+2026-05-26 23:45:18,725 [INFO] api.scheduler: Scheduler stopped
+2026-05-26 23:45:18,725 [INFO] apscheduler.scheduler: Scheduler has been shut down
+2026-05-26 23:45:18,725 [INFO] api.routes: MarketPulse Intelligence API stopped

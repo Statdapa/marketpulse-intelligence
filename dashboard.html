@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>MarketPulse Intelligence</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Syne:wght@400;600;700;800&display=swap');
+*{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0c0f;--bg2:#0f1117;--bg3:#161b24;--bg4:#1c2333;
+  --border:#1f2d3d;--border2:#.venv\Scripts\python.exe main.py2a3a4f;
+  --text:#e2e8f0;--text2:#8899aa;--text3:#4a5568;
+  --green:#00d4aa;--red:#ff4757;--amber:#f59e0b;--blue:#3b82f6;--purple:#8b5cf6;--cyan:#06b6d4;
+  --font-mono:'DM Mono',monospace;--font-display:'Syne',sans-serif;
+}
+body{background:var(--bg);color:var(--text);font-family:var(--font-mono);font-size:13px;min-height:100vh}
+/* HEADER */
+.hdr{background:var(--bg2);border-bottom:1px solid var(--border);padding:0 24px;height:52px;display:flex;align-items:center;gap:0}
+.hdr-logo{font-family:var(--font-display);font-size:15px;font-weight:800;letter-spacing:-.02em}
+.hdr-logo span{color:var(--green)}
+.hdr-sep{width:1px;height:24px;background:var(--border);margin:0 20px}
+.hdr-pill{background:rgba(0,212,170,.08);border:1px solid rgba(0,212,170,.2);color:var(--green);font-size:10px;padding:3px 10px;border-radius:20px;text-transform:uppercase;letter-spacing:.08em}
+.hdr-pill::before{content:'●';margin-right:5px;animation:blink 1.4s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.2}}
+.hdr-right{margin-left:auto;display:flex;align-items:center;gap:12px}
+.hdr-time{font-size:11px;color:var(--text3);font-feature-settings:'tnum'}
+.hdr-api{font-size:10px;color:var(--text3)}
+.hdr-api span{color:var(--green)}
+/* LAYOUT */
+.layout{display:grid;grid-template-columns:220px 1fr 300px;height:calc(100vh - 52px - 28px);overflow:hidden}
+/* SIDEBAR */
+.sidebar{background:var(--bg2);border-right:1px solid var(--border);overflow-y:auto;padding:14px}
+.sec-title{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--text3);margin-bottom:8px;padding-left:4px}
+.ex-item{display:flex;align-items:center;gap:8px;padding:7px 10px;border-radius:8px;border:1px solid transparent;margin-bottom:3px;cursor:pointer;transition:all .15s}
+.ex-item:hover{background:var(--bg3);border-color:var(--border)}
+.ex-dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+.ex-name{font-size:11px;flex:1;text-transform:capitalize}
+.ex-price{font-size:11px;font-feature-settings:'tnum'}
+.ex-chg{font-size:10px;min-width:52px;text-align:right;font-feature-settings:'tnum'}
+.pos{color:var(--green)}.neg{color:var(--red)}
+.sent-wrap{margin-top:16px}
+.sent-row{margin-bottom:8px}
+.sent-label{display:flex;justify-content:space-between;font-size:10px;color:var(--text2);margin-bottom:3px}
+.sent-bar{height:4px;background:var(--bg4);border-radius:2px;overflow:hidden}
+.sent-fill{height:100%;border-radius:2px;transition:width .8s ease}
+/* CENTER */
+.center{overflow-y:auto;padding:18px;display:flex;flex-direction:column;gap:14px}
+.stat-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:14px 16px}
+.stat-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:6px}
+.stat-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3)}
+.stat-badge{font-size:9px;padding:2px 8px;border-radius:10px}
+.badge-green{background:rgba(0,212,170,.1);color:var(--green);border:1px solid rgba(0,212,170,.2)}
+.badge-amber{background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.2)}
+.badge-red{background:rgba(255,71,87,.1);color:var(--red);border:1px solid rgba(255,71,87,.2)}
+.badge-cyan{background:rgba(6,182,212,.1);color:var(--cyan);border:1px solid rgba(6,182,212,.2)}
+.stat-val{font-family:var(--font-display);font-size:26px;font-weight:700;letter-spacing:-.03em;line-height:1}
+.stat-sub{font-size:10px;color:var(--text2);margin-top:4px}
+/* CHART CARD */
+.card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:16px}
+.card-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:14px}
+.card-title{font-family:var(--font-display);font-size:13px;font-weight:600}
+.card-sub{font-size:10px;color:var(--text3)}
+/* TABLE */
+.tbl{width:100%;border-collapse:collapse;font-size:11px}
+.tbl th{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--text3);padding:5px 8px;text-align:left;border-bottom:1px solid var(--border)}
+.tbl td{padding:7px 8px;border-bottom:1px solid rgba(31,45,61,.5);font-feature-settings:'tnum'}
+.tbl tr:hover td{background:var(--bg3)}
+.spread-pill{display:inline-block;padding:2px 8px;border-radius:10px;font-size:10px}
+.pill-good{background:rgba(0,212,170,.1);color:var(--green);border:1px solid rgba(0,212,170,.2)}
+.pill-mid{background:rgba(245,158,11,.1);color:var(--amber);border:1px solid rgba(245,158,11,.2)}
+.pill-bad{background:rgba(255,71,87,.1);color:var(--red);border:1px solid rgba(255,71,87,.2)}
+/* ANOMALY */
+.anomaly-item{display:flex;gap:10px;padding:10px 0;border-bottom:1px solid var(--border)}
+.anomaly-item:last-child{border-bottom:none}
+.a-icon{width:30px;height:30px;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0}
+.a-title{font-size:11px;font-weight:500;margin-bottom:3px}
+.a-desc{font-size:10px;color:var(--text2);line-height:1.5}
+.a-meta{font-size:9px;color:var(--text3);margin-top:3px}
+/* RIGHT PANEL */
+.rpanel{background:var(--bg2);border-left:1px solid var(--border);display:flex;flex-direction:column}
+.rp-tabs{display:flex;border-bottom:1px solid var(--border)}
+.rp-tab{flex:1;padding:10px 4px;font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--text3);text-align:center;cursor:pointer;border-bottom:2px solid transparent;transition:all .15s}
+.rp-tab.active{color:var(--green);border-bottom-color:var(--green)}
+.rp-body{flex:1;overflow-y:auto;padding:14px}
+/* AI BOX */
+.ai-box{background:var(--bg3);border:1px solid var(--border2);border-radius:10px;padding:12px 14px;margin-bottom:12px}
+.ai-label{font-size:9px;letter-spacing:.1em;text-transform:uppercase;color:var(--purple);margin-bottom:6px}
+.ai-label::before{content:'◈ '}
+.ai-q{font-size:11px;color:var(--text2);line-height:1.5;font-style:italic;margin-bottom:8px}
+.ai-a{font-size:11px;color:var(--text);line-height:1.6;border-top:1px solid var(--border);padding-top:8px}
+.ai-loading{color:var(--text3);font-style:italic}
+.ai-input-row{display:flex;gap:8px;margin-top:4px}
+.ai-input{flex:1;background:var(--bg3);border:1px solid var(--border2);color:var(--text);font-family:var(--font-mono);font-size:11px;padding:8px 12px;border-radius:8px;outline:none;transition:border-color .15s}
+.ai-input:focus{border-color:var(--purple)}
+.ai-input::placeholder{color:var(--text3)}
+.ai-send{background:rgba(139,92,246,.15);border:1px solid rgba(139,92,246,.35);color:var(--purple);font-family:var(--font-mono);font-size:10px;padding:8px 14px;border-radius:8px;cursor:pointer;transition:all .15s;white-space:nowrap}
+.ai-send:hover{background:rgba(139,92,246,.25)}
+.ai-send:disabled{opacity:.4;cursor:not-allowed}
+/* NEWS */
+.news-item{padding:10px 0;border-bottom:1px solid var(--border)}
+.news-item:last-child{border-bottom:none}
+.news-src{font-size:9px;letter-spacing:.08em;text-transform:uppercase;color:var(--cyan);margin-bottom:3px}
+.news-title{font-size:11px;color:var(--text);line-height:1.4;margin-bottom:3px}
+.news-time{font-size:9px;color:var(--text3)}
+/* STATUS BAR */
+.status-bar{background:var(--bg2);border-top:1px solid var(--border);height:28px;display:flex;align-items:center;padding:0 20px;gap:16px}
+.sb-item{font-size:10px;color:var(--text3);display:flex;align-items:center;gap:5px}
+.sb-dot{width:5px;height:5px;border-radius:50%}
+.sb-dot.on{background:var(--green);box-shadow:0 0 5px var(--green)}
+.sb-dot.off{background:var(--red)}
+.sb-dot.warn{background:var(--amber)}
+.sb-val{color:var(--text2)}
+/* LOADING */
+.loading{color:var(--text3);font-style:italic;padding:20px;text-align:center}
+.error-msg{color:var(--red);font-size:11px;padding:8px;background:rgba(255,71,87,.05);border:1px solid rgba(255,71,87,.15);border-radius:6px;margin-bottom:8px}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="hdr">
+  <div class="hdr-logo">Market<span>Pulse</span> Intelligence</div>
+  <div class="hdr-sep"></div>
+  <div class="hdr-pill">Live Feed</div>
+  <div class="hdr-right">
+    <div class="hdr-api">API <span id="api-status">connecting...</span></div>
+    <div class="hdr-time" id="clock">--:--:-- UTC</div>
+  </div>
+</header>
+
+<div class="layout">
+
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sec-title">Exchange Feeds</div>
+  <div id="ex-list"><div class="loading">Loading...</div></div>
+
+  <div class="sent-wrap">
+    <div class="sec-title">Sentiment Index</div>
+    <div id="sent-list"><div class="loading">Loading...</div></div>
+  </div>
+
+  <div style="margin-top:16px">
+    <div class="sec-title">Active Anomalies</div>
+    <div id="sidebar-anomalies"><div class="loading">Loading...</div></div>
+  </div>
+</aside>
+
+<!-- CENTER -->
+<main class="center">
+  <!-- STAT ROW -->
+  <div class="stat-row">
+    <div class="stat-card">
+      <div class="stat-top"><span class="stat-label">BTC Best Bid</span><span class="stat-badge badge-green" id="btc-chg">live</span></div>
+      <div class="stat-val" id="btc-price" style="color:var(--green)">--</div>
+      <div class="stat-sub" id="btc-sub">fetching...</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="stat-label">Arb Signals</span><span class="stat-badge badge-amber" id="arb-badge">--</span></div>
+      <div class="stat-val" id="arb-count" style="color:var(--amber)">--</div>
+      <div class="stat-sub" id="arb-sub">scanning...</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="stat-label">Exchanges Live</span><span class="stat-badge badge-cyan">live</span></div>
+      <div class="stat-val" id="ex-count" style="color:var(--cyan)">--</div>
+      <div class="stat-sub" id="ex-sub">of 10 monitored</div>
+    </div>
+    <div class="stat-card">
+      <div class="stat-top"><span class="stat-label">Anomalies</span><span class="stat-badge badge-red" id="anom-badge">--</span></div>
+      <div class="stat-val" id="anom-count" style="color:var(--red)">--</div>
+      <div class="stat-sub">active alerts</div>
+    </div>
+  </div>
+
+  <!-- SPREAD TABLE -->
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">BTC/USDT Live Spread — All Exchanges</span>
+      <span class="card-sub" id="last-update">updating every 30s</span>
+    </div>
+    <table class="tbl">
+      <thead><tr><th>Exchange</th><th>Bid</th><th>Ask</th><th>Spread $</th><th>Spread %</th><th>Rating</th></tr></thead>
+      <tbody id="spread-body"><tr><td colspan="6" class="loading">Fetching live data...</td></tr></tbody>
+    </table>
+  </div>
+
+  <!-- ARBITRAGE -->
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">⚡ Arbitrage Signals</span>
+      <span class="card-sub">min divergence 0.1%</span>
+    </div>
+    <div id="arb-list"><div class="loading">Scanning for opportunities...</div></div>
+  </div>
+
+  <!-- REGULATORY -->
+  <div class="card">
+    <div class="card-hdr">
+      <span class="card-title">⚖️ Regulatory Filings</span>
+      <span class="card-sub">SEC · MAS · OJK</span>
+    </div>
+    <div id="reg-list"><div class="loading">Loading filings...</div></div>
+  </div>
+</main>
+
+<!-- RIGHT PANEL -->
+<aside class="rpanel">
+  <div class="rp-tabs">
+    <div class="rp-tab active" onclick="switchTab(this,'ai')">AI Query</div>
+    <div class="rp-tab" onclick="switchTab(this,'alerts')">Alerts</div>
+    <div class="rp-tab" onclick="switchTab(this,'news')">News</div>
+  </div>
+
+  <!-- AI TAB -->
+  <div class="rp-body" id="tab-ai">
+    <div id="ai-history"></div>
+    <div class="ai-input-row">
+      <input class="ai-input" id="ai-inp" placeholder="Ask the intelligence layer..." />
+      <button class="ai-send" id="ai-btn" onclick="sendQuery()">Ask ↗</button>
+    </div>
+    <div style="margin-top:8px;font-size:10px;color:var(--text3)">
+      Try: "Which exchange has the best BTC spread?" · "Any arbitrage opportunities?"
+    </div>
+  </div>
+
+  <!-- ALERTS TAB -->
+  <div class="rp-body" id="tab-alerts" style="display:none">
+    <div id="alerts-list"><div class="loading">Loading alerts...</div></div>
+  </div>
+
+  <!-- NEWS TAB -->
+  <div class="rp-body" id="tab-news" style="display:none">
+    <div id="news-list"><div class="loading">Loading news...</div></div>
+  </div>
+</aside>
+
+</div>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <div class="sb-item"><div class="sb-dot on" id="dot-api"></div>API <span class="sb-val" id="sb-api">localhost:8000</span></div>
+  <div class="sb-item"><div class="sb-dot" id="dot-ex"></div>Exchanges <span class="sb-val" id="sb-ex">--</span></div>
+  <div class="sb-item"><div class="sb-dot" id="dot-groq"></div>Groq RAG <span class="sb-val" id="sb-groq">--</span></div>
+  <div class="sb-item"><div class="sb-dot warn" id="dot-tg"></div>Telegram <span class="sb-val">not configured</span></div>
+  <div class="sb-item" style="margin-left:auto"><div class="sb-dot on"></div>Scheduler <span class="sb-val">running</span></div>
+</div>
+
+<script>
+const API = 'http://localhost:8000';
+let refreshTimer = null;
+
+// ── Clock ──────────────────────────────────────────────────────────────────
+function tickClock(){
+  document.getElementById('clock').textContent = new Date().toUTCString().slice(17,25) + ' UTC';
+}
+setInterval(tickClock, 1000); tickClock();
+
+// ── Tab switching ──────────────────────────────────────────────────────────
+function switchTab(el, name){
+  document.querySelectorAll('.rp-tab').forEach(t => t.classList.remove('active'));
+  el.classList.add('active');
+  ['ai','alerts','news'].forEach(t => {
+    document.getElementById('tab-'+t).style.display = t === name ? 'block' : 'none';
+  });
+  if(name === 'alerts') loadAlerts();
+  if(name === 'news') loadNews();
+}
+
+// ── Fetch wrapper ──────────────────────────────────────────────────────────
+async function apiFetch(path){
+  try {
+    const r = await fetch(API + path);
+    if(!r.ok) throw new Error(r.status);
+    return await r.json();
+  } catch(e) {
+    console.warn('API error:', path, e);
+    return null;
+  }
+}
+
+// ── Spread rating ──────────────────────────────────────────────────────────
+function spreadRating(pct){
+  if(pct < 0.01) return '<span class="spread-pill pill-good">✓ Tight</span>';
+  if(pct < 0.05) return '<span class="spread-pill pill-mid">~ Normal</span>';
+  return '<span class="spread-pill pill-bad">⚠ Wide</span>';
+}
+
+// ── Load exchanges ─────────────────────────────────────────────────────────
+async function loadExchanges(){
+  const data = await apiFetch('/api/v1/exchanges');
+  if(!data || !data.exchanges){
+    document.getElementById('ex-list').innerHTML = '<div class="error-msg">No exchange data yet</div>';
+    return;
+  }
+
+  const exs = Object.entries(data.exchanges).sort((a,b) => a[1].spread_pct - b[1].spread_pct);
+  const count = exs.length;
+
+  // Update stat cards
+  document.getElementById('ex-count').textContent = count;
+  document.getElementById('ex-sub').textContent = `of 10 monitored`;
+
+  if(exs.length > 0){
+    const best = exs[0];
+    document.getElementById('btc-price').textContent = '$' + Number(best[1].bid).toLocaleString('en-US', {minimumFractionDigits:2, maximumFractionDigits:2});
+    document.getElementById('btc-sub').textContent = `Best spread: ${best[0]} · ${(best[1].spread_pct*100).toFixed(4)}%`;
+    document.getElementById('btc-chg').textContent = '▲ live';
+  }
+
+  // Sidebar exchange list
+  const colors = {tight:'#00d4aa', normal:'#f59e0b', wide:'#ff4757'};
+  document.getElementById('ex-list').innerHTML = exs.map(([name, d]) => {
+    const pct = d.spread_pct * 100;
+    const color = pct < 0.01 ? colors.tight : pct < 0.05 ? colors.normal : colors.wide;
+    return `<div class="ex-item">
+      <div class="ex-dot" style="background:${color}"></div>
+      <span class="ex-name">${name}</span>
+      <span class="ex-price">$${Number(d.bid).toLocaleString('en-US',{maximumFractionDigits:0})}</span>
+    </div>`;
+  }).join('');
+
+  // Spread table
+  document.getElementById('spread-body').innerHTML = exs.map(([name, d]) => {
+    const pct = (d.spread_pct * 100).toFixed(4);
+    return `<tr>
+      <td style="color:var(--text);text-transform:capitalize">${name}</td>
+      <td>$${Number(d.bid).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
+      <td>$${Number(d.ask).toLocaleString('en-US',{minimumFractionDigits:2,maximumFractionDigits:2})}</td>
+      <td>$${Number(d.spread).toFixed(2)}</td>
+      <td>${pct}%</td>
+      <td>${spreadRating(d.spread_pct*100)}</td>
+    </tr>`;
+  }).join('');
+
+  document.getElementById('last-update').textContent = 'Updated ' + new Date().toLocaleTimeString();
+  document.getElementById('dot-ex').className = 'sb-dot on';
+  document.getElementById('sb-ex').textContent = count + ' live';
+  document.getElementById('api-status').textContent = '● connected';
+  document.getElementById('api-status').style.color = 'var(--green)';
+}
+
+// ── Load arbitrage ─────────────────────────────────────────────────────────
+async function loadArbitrage(){
+  const data = await apiFetch('/api/v1/arbitrage?min_divergence=0.05');
+  const el = document.getElementById('arb-list');
+  const countEl = document.getElementById('arb-count');
+  const subEl = document.getElementById('arb-sub');
+  const badgeEl = document.getElementById('arb-badge');
+
+  if(!data || !data.signals || data.signals.length === 0){
+    countEl.textContent = '0';
+    subEl.textContent = 'no signals detected';
+    badgeEl.textContent = 'clear';
+    el.innerHTML = '<div style="color:var(--text3);font-size:11px;padding:8px">No arbitrage opportunities above 0.05% threshold right now.</div>';
+    return;
+  }
+
+  countEl.textContent = data.signals.length;
+  subEl.textContent = `opportunities detected`;
+  badgeEl.textContent = '⚠ active';
+
+  el.innerHTML = data.signals.map(s => {
+    const d = s.data || {};
+    return `<div class="anomaly-item">
+      <div class="a-icon" style="background:rgba(245,158,11,.12);color:var(--amber)">⚡</div>
+      <div>
+        <div class="a-title">${(d.buy_exchange||'').toUpperCase()} → ${(d.sell_exchange||'').toUpperCase()}</div>
+        <div class="a-desc">${s.description}</div>
+        <div class="a-meta">${s.severity?.toUpperCase()} · ${s.ts?.slice(0,19)} UTC</div>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+// ── Load anomalies ─────────────────────────────────────────────────────────
+async function loadAnomalies(){
+  const data = await apiFetch('/api/v1/anomalies');
+  const count = data?.anomalies?.length || 0;
+  document.getElementById('anom-count').textContent = count;
+  document.getElementById('anom-badge').textContent = count > 0 ? '⚠ active' : 'clear';
+
+  // Sidebar
+  const el = document.getElementById('sidebar-anomalies');
+  if(!data || count === 0){
+    el.innerHTML = '<div style="color:var(--text3);font-size:10px;padding:4px">No active anomalies</div>';
+    return;
+  }
+  el.innerHTML = data.anomalies.slice(0,5).map(a => {
+    const colors = {arbitrage:'var(--amber)',spread_anomaly:'var(--red)',sentiment_shift:'var(--cyan)',filing_spike:'var(--purple)'};
+    const color = colors[a.type] || 'var(--text2)';
+    return `<div style="padding:6px 0;border-bottom:1px solid var(--border)">
+      <div style="font-size:9px;text-transform:uppercase;letter-spacing:.08em;color:${color};margin-bottom:2px">${a.type?.replace(/_/g,' ')}</div>
+      <div style="font-size:10px;color:var(--text2);line-height:1.4">${a.description?.slice(0,80)}...</div>
+    </div>`;
+  }).join('');
+}
+
+// ── Load alerts (right panel) ──────────────────────────────────────────────
+async function loadAlerts(){
+  const data = await apiFetch('/api/v1/anomalies');
+  const el = document.getElementById('alerts-list');
+  if(!data || !data.anomalies?.length){
+    el.innerHTML = '<div style="color:var(--text3);font-size:11px;padding:8px">No active alerts</div>';
+    return;
+  }
+  const icons = {arbitrage:'⚡',spread_anomaly:'📊',sentiment_shift:'📡',filing_spike:'⚖️'};
+  const colors = {arbitrage:'rgba(245,158,11,.12)',spread_anomaly:'rgba(255,71,87,.1)',sentiment_shift:'rgba(6,182,212,.1)',filing_spike:'rgba(139,92,246,.1)'};
+  const textColors = {arbitrage:'var(--amber)',spread_anomaly:'var(--red)',sentiment_shift:'var(--cyan)',filing_spike:'var(--purple)'};
+  el.innerHTML = data.anomalies.map(a => `
+    <div class="anomaly-item">
+      <div class="a-icon" style="background:${colors[a.type]||'var(--bg4)'};color:${textColors[a.type]||'var(--text2)'}">${icons[a.type]||'🔔'}</div>
+      <div>
+        <div class="a-title">${a.type?.replace(/_/g,' ').toUpperCase()}</div>
+        <div class="a-desc">${a.description}</div>
+        <div class="a-meta">${a.severity?.toUpperCase()} · ${a.ts?.slice(0,19)} UTC</div>
+      </div>
+    </div>`).join('');
+}
+
+// ── Load regulatory ────────────────────────────────────────────────────────
+async function loadRegulatory(){
+  const data = await apiFetch('/api/v1/regulatory');
+  const el = document.getElementById('reg-list');
+  if(!data || !data.filings?.length){
+    el.innerHTML = '<div style="color:var(--text3);font-size:11px;padding:8px">No regulatory filings yet — scraper runs every 15 minutes</div>';
+    return;
+  }
+  const srcColors = {SEC:'var(--blue)',MAS:'var(--green)',OJK:'var(--amber)'};
+  el.innerHTML = data.filings.slice(0,10).map(f => `
+    <div class="news-item">
+      <div class="news-src" style="color:${srcColors[f.source]||'var(--cyan)'}">${f.source}</div>
+      <div class="news-title"><a href="${f.url}" target="_blank" style="color:var(--text);text-decoration:none">${f.title}</a></div>
+      <div class="news-time">${f.ts?.slice(0,19)} UTC</div>
+    </div>`).join('');
+}
+
+// ── Load sentiment ─────────────────────────────────────────────────────────
+async function loadSentiment(){
+  const data = await apiFetch('/api/v1/sentiment');
+  const el = document.getElementById('sent-list');
+  if(!data || !Object.keys(data.sentiment||{}).length){
+    el.innerHTML = '<div style="color:var(--text3);font-size:10px">Sentiment scraper runs every 5 min</div>';
+    return;
+  }
+  el.innerHTML = Object.entries(data.sentiment).map(([key, s]) => {
+    const score = s.score || 50;
+    const color = score >= 60 ? 'var(--green)' : score >= 40 ? 'var(--amber)' : 'var(--red)';
+    return `<div class="sent-row">
+      <div class="sent-label"><span>${s.platform?.toUpperCase()} / ${s.symbol}</span><span style="color:${color}">${score.toFixed(0)}%</span></div>
+      <div class="sent-bar"><div class="sent-fill" style="width:${score}%;background:${color}"></div></div>
+    </div>`;
+  }).join('');
+}
+
+// ── Load news ──────────────────────────────────────────────────────────────
+async function loadNews(){
+  const data = await apiFetch('/api/v1/news');
+  const el = document.getElementById('news-list');
+  if(!data || !data.news?.length){
+    el.innerHTML = '<div style="color:var(--text3);font-size:11px;padding:8px">No news items yet</div>';
+    return;
+  }
+  el.innerHTML = data.news.slice(0,20).map(n => `
+    <div class="news-item">
+      <div class="news-src">${n.source}</div>
+      <div class="news-title"><a href="${n.url}" target="_blank" style="color:var(--text);text-decoration:none">${n.headline}</a></div>
+      <div class="news-time">${n.ts?.slice(0,19)} UTC</div>
+    </div>`).join('');
+}
+
+// ── AI Query ───────────────────────────────────────────────────────────────
+async function sendQuery(){
+  const inp = document.getElementById('ai-inp');
+  const btn = document.getElementById('ai-btn');
+  const question = inp.value.trim();
+  if(!question) return;
+
+  const history = document.getElementById('ai-history');
+  inp.value = '';
+  btn.disabled = true;
+  btn.textContent = '...';
+
+  // Add question bubble
+  history.innerHTML += `<div class="ai-box">
+    <div class="ai-label">You</div>
+    <div class="ai-q">"${question}"</div>
+    <div class="ai-a ai-loading" id="ai-ans-${Date.now()}">⟳ Querying Groq LLaMA3...</div>
+  </div>`;
+  history.scrollTop = history.scrollHeight;
+
+  const ansId = 'ai-ans-' + (Date.now()-1);
+
+  try {
+    const r = await fetch(API + '/api/v1/query', {
+      method: 'POST',
+      headers: {'Content-Type':'application/json'},
+      body: JSON.stringify({question})
+    });
+    const data = await r.json();
+    const ansEl = history.querySelector('.ai-loading');
+    if(ansEl){
+      ansEl.classList.remove('ai-loading');
+      ansEl.innerHTML = data.answer || 'No answer returned.';
+    }
+    document.getElementById('sb-groq').textContent = 'active';
+    document.getElementById('dot-groq').className = 'sb-dot on';
+  } catch(e) {
+    const ansEl = history.querySelector('.ai-loading');
+    if(ansEl) ansEl.innerHTML = '<span style="color:var(--red)">Query failed — is GROQ_API_KEY set?</span>';
+  }
+
+  btn.disabled = false;
+  btn.textContent = 'Ask ↗';
+  history.scrollTop = history.scrollHeight;
+}
+
+document.getElementById('ai-inp').addEventListener('keydown', e => {
+  if(e.key === 'Enter') sendQuery();
+});
+
+// ── Snapshot check (status bar) ────────────────────────────────────────────
+async function checkHealth(){
+  const data = await apiFetch('/');
+  if(data){
+    document.getElementById('dot-api').className = 'sb-dot on';
+    document.getElementById('sb-groq').textContent = data.data_sources?.groq_rag ? 'connected' : 'no key';
+    document.getElementById('dot-groq').className = data.data_sources?.groq_rag ? 'sb-dot on' : 'sb-dot warn';
+  } else {
+    document.getElementById('dot-api').className = 'sb-dot off';
+    document.getElementById('api-status').textContent = '● disconnected';
+    document.getElementById('api-status').style.color = 'var(--red)';
+  }
+}
+
+// ── Master refresh ─────────────────────────────────────────────────────────
+async function refreshAll(){
+  await Promise.all([
+    loadExchanges(),
+    loadArbitrage(),
+    loadAnomalies(),
+    loadRegulatory(),
+    loadSentiment(),
+    checkHealth(),
+  ]);
+}
+
+// Init + auto-refresh every 30s
+refreshAll();
+setInterval(refreshAll, 30000);
+</script>
+</body>
+</html>
