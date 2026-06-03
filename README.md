@@ -4,7 +4,7 @@ A real-time crypto market intelligence platform that aggregates live data from e
 
 Built and submitted for the **Transforming Enterprise Through AI** hackathon on lablab.ai. An upgraded version was developed for the **Web Data UNLOCKED Hackathon**.
 
-📄 [Full technical writeup on Medium]([https://medium.com/@91lbertjr/building-marketpulse-intelligence-a-real-time-crypto-market-platform-with-llm-powered-analysis-](https://lnkd.in/gUsw2UGV))
+📄 [Full technical writeup on Medium](https://lnkd.in/gUsw2UGV)
 
 ---
 
